@@ -28,5 +28,4 @@ public class WebTest {
     public void shouldSeeIssue() {
         $("#issues-tab").shouldHave(text("Issues"));
     }
-
 }

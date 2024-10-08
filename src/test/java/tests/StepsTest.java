@@ -57,5 +57,4 @@ public class StepsTest {
         steps.clickOnRepositoryLink(REPOSITORY);
         steps.shouldSeeIssue();
     }
-
 }
