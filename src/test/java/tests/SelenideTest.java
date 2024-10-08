@@ -21,5 +21,4 @@ public class SelenideTest {
         $(linkText("DariaS2302/Homework_08.10")).click();
         $("#issues-tab").shouldHave(text("Issues"));
     }
-
 }

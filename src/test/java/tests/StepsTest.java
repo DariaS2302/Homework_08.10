@@ -28,16 +28,14 @@ public class StepsTest {
     public void lambdaStepTest() {
        SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Открываем главную страницу", () -> {
-            open("https://github.com");
-        });
+        step("Открываем главную страницу", () ->
+                open("https://github.com"));
         step("Ищем репозиторий " + REPOSITORY, () -> {
                     $(".header-search-button").click();
                     $("#query-builder-test").setValue(REPOSITORY).pressEnter();
                 });
-        step("Кликаем по ссылке репозитория " + REPOSITORY, () -> {
-                    $(linkText(REPOSITORY)).click();
-                });
+        step("Кликаем по ссылке репозитория " + REPOSITORY, () ->
+                $(linkText(REPOSITORY)).click());
         step("Проверяем наличие Issue",  () -> {
             $("#issues-tab").shouldHave(text("Issues"));
                 });
