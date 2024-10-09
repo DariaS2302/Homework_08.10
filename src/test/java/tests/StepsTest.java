@@ -14,6 +14,7 @@ import static org.openqa.selenium.By.linkText;
 
 @Feature("Issue в репозитории")
 @Story("Проверка наличия Issue")
+@Owner("Daria Sarycheva")
 
 public class StepsTest {
 
@@ -21,7 +22,6 @@ public class StepsTest {
 
     @Test
     @DisplayName("Проверка наличия Issue в репозитории с помощью lambda")
-    @Owner("Daria Sarycheva")
     @Severity(SeverityLevel.CRITICAL)
     @Link(value = "Test page", url = "https://github.com/DariaS2302/Homework_08.10")
 
@@ -44,11 +44,10 @@ public class StepsTest {
 
     @Test
     @DisplayName("Проверка наличия Issue в репозитории с помощью шагов с аннотацией Step")
-    @Owner("Daria Sarycheva")
     @Severity(SeverityLevel.TRIVIAL)
     @Link(value = "Test page", url = "https://github.com/DariaS2302/Homework_08.10")
 
-    public void AnnotatedStepTest() {
+    public void annotatedStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         WebTest steps = new WebTest();
 
